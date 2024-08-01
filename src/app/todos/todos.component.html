@@ -1,0 +1,20 @@
+<div>
+    <table>
+        <thead>
+            <th>Id</th>
+            <th>UserId</th>
+            <th>Title</th>
+            <th>Completed</th>
+        </thead>
+        <tbody>
+            @for (todo of todoArray; track $index) {
+            <tr>
+                <td>{{ todo.id }}</td>
+                <td>{{ todo.userId }}</td>
+                <td>{{ todo.title }}</td>
+                <td>{{ todo.completed }}</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
