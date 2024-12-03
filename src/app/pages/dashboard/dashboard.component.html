@@ -1,0 +1,20 @@
+<div class="dashboard">
+    <h1>Dashboard</h1>
+    @defer (when showProfile) {
+    <div>
+        <img [src]="profile?.picture" alt="profile pic" />
+        <p>{{ profile?.name }}</p>
+        <p>{{ profile?.email }}</p>
+    </div>
+    }
+    @loading {
+    <p>Loading...</p>
+    }
+
+    <div style="display: flex; gap: 0.5rem;margin-bottom: 1rem;">
+        <input type="text" [(ngModel)]="folderName" />
+        <button (click)="createFolder()">Create folder</button>
+    </div>
+
+    <button (click)="logout()">Logout</button>
+</div>
