@@ -6,11 +6,10 @@ import { TodosComponent } from './todos/todos.component';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet, CommonModule, ChildComponent, TodosComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+    selector: 'app-root',
+    imports: [RouterOutlet, CommonModule],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit {
   private http = inject(HttpClient);
